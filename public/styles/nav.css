@@ -13,3 +13,18 @@ nav span {
   font-family: 'Bungee';
   padding-top: 1.5em;
 }
+
+.new-tweet {
+  display: flex;
+  margin: .7em;
+  font-size: .8em;
+}
+
+.write-new-tweet {
+  font-size: .5em;
+  margin-bottom: 0;
+}
+
+.icon {
+  color: red;
+}
