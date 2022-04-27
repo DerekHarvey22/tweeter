@@ -17,11 +17,15 @@
     <!--link to header-->
     <link rel="stylesheet" href="/styles/header.css">
 
+    <!--link to new tweet css-->
+    <link rel="stylesheet" href="/styles/new-tweet.css">
+
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script src="/scripts/composer-char-counter.js"></script>
 
     <!-- New Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -57,12 +61,21 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <h1>Testing Layout Changes</h1>
-      <p>If you haven't seen Game of Thrones, go watch it right now. If you have then you'll totally get why this Hodor themed lorem ipsum generator is just brilliant.
+      <section class="new-tweet">
+        <form>
+          <form method="POST" action="/tweets/" class="teaxtarea"></form>
+          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+          <div>
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
 
-        Hodor. Hodor hodor, hodor. Hodor hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor; hodor hodor hodor. Hodor. Hodor hodor; hodor hodor - hodor, hodor, hodor hodor. Hodor, hodor. Hodor. Hodor, hodor hodor hodor; hodor hodor; hodor hodor hodor! Hodor hodor HODOR! Hodor hodor... Hodor hodor hodor...
-        TRUMP IPSUM
-        </p>
+      <section class='tweet-container'>
+
+      </section>
+      
     </main>
   </body>
 </html>
