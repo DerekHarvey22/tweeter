@@ -8,3 +8,8 @@ nav {
   width: 100vw;
   align-items: center;
 }
+
+nav span {
+  font-family: 'Bungee';
+  padding-top: 1.5em;
+}
