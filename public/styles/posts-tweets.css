@@ -1,0 +1,64 @@
+.post-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  position: relative;
+}
+
+#user {
+  display: flex;
+  align-items: center;
+  padding-right: 5%;
+}
+
+#username {
+
+  padding-left: 1;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+  font-size: smaller;
+}
+
+#userID {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 100;
+  font-size: smaller;
+}
+
+article.post {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid rgb(199, 188, 188);
+  margin: 5%;
+  padding: 3%;
+  padding-top: 0%;
+  padding-bottom: 0%;
+}
+
+article.post footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 3px solid black;
+}
+
+#user-interaction {
+  color: rgb(126, 126, 129);
+} 
+
+.post:hover {
+  border: 2px solid black;
+  box-shadow: 4px 10px darkgray;
+}
+
+.fa-flag:hover {
+  color: rgb(76, 76, 135);
+}
+.fa-heart:hover {
+  color: red
+}
+
+.fa-retweet:hover {
+  color:aliceblue
+}

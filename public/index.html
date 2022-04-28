@@ -20,6 +20,8 @@
     <!--link to new tweet css-->
     <link rel="stylesheet" href="/styles/new-tweet.css">
 
+    <!--link to post tweets-->
+    <link rel="stylesheet" href="/styles/posts-tweets.css">
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -49,7 +51,7 @@
     </div>
     </nav>
     <!--code from activity adding the header-->
-    <header>
+    <header class="page-header">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
@@ -62,8 +64,7 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <form>
-          <form method="POST" action="/tweets/" class="teaxtarea"></form>
+          <form method="POST" action="/tweets/" class="textarea">
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div>
             <button type="submit">Tweet</button>
@@ -72,7 +73,31 @@
         </form>
       </section>
 
-      <section class='tweet-container'>
+      
+
+      <section>
+      <article class="post">
+        <header class="post-header">
+          <div id ="user">
+            <i class="fa-regular fa-user"></i>
+            <h2 id='username'> Newton</h2>
+          </div>
+            <h2 id="userID">@SirIsaac</h2>
+        </header>
+        <p>
+          If I have seen further it is by standing on the shoulders of poodles!
+        </p>
+      <footer>
+        <p><small>Posted 10 days ago</small></p>
+        <div id="user-interaction">
+          <i class="fa-solid fa-flag"></i>
+              <i class="fa-solid fa-retweet"></i>
+              <i class="fa-solid fa-heart"></i>
+        </div>
+      </footer>
+      </article>
+      
+      
 
       </section>
       

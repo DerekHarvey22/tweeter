@@ -6,6 +6,7 @@
   border: none;
   border-bottom: 4px solid chocolate;
   background: none;
+  width: 85vw;
 }
 
 
@@ -30,6 +31,13 @@ button {
 button:hover {
   background-color: #8577dd;
 }
+
+.new-tweet .counter {
+  float:right;
+  font-family: 'Bungee';
+}
+
+
 
 
 
