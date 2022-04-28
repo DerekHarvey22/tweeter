@@ -8,6 +8,8 @@ nav {
   width: 100vw;
   align-items: center;
   z-index: 1;
+  position: fixed;
+  top: 0%;
 }
 
 nav span {

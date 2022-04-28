@@ -1,5 +1,6 @@
 .page-header {
-  height: 400px;
+  padding-top: 130px;
+  height: auto;
   width: 100vw;
   align-items: center;
   display: flex;
