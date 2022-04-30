@@ -6,6 +6,12 @@
 
 // Test / driver code (temporary). Eventually will get this from the server.
 $(document).ready(function() {
+
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 //implement redner tweets function
 // loops through tweets
   // calls createTweetElement for each tweet
@@ -23,16 +29,16 @@ const createTweetElement = function (post) {
       `<article class="post">
         <header class="post-header">
           <div id ="user">
-            <i img src="${post.user.avatars}" alt="Profile picture"></i>
-            <h2 id='username'> "${post.user.name}" </h2>
+            <i img src="${escape(post.user.avatars)}" alt="Profile picture"></i>
+            <h2 id='username'> "${escape(post.user.name)}" </h2>
           </div>
-            <h2 id="userID">${post.user.handle}</h2>
+            <h2 id="userID">${escape(post.user.handle)}</h2>
         </header>
         <p>
-        ${post.content.text}
+        ${escape(post.content.text)}
         </p>
       <footer>
-        <p><small>${timeago.format(post.created_at)}</small></p>
+        <p><small>${timeago.format(escape(post.created_at))}</small></p>
         <div id="user-interaction">
           <i class="fa-solid fa-flag"></i>
               <i class="fa-solid fa-retweet"></i>
