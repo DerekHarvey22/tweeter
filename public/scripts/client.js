@@ -46,7 +46,7 @@ const renderTweets = function(tweets) {
 }
 //implement createTweetelement function
 const createTweetElement = function (post) {
-  console.log(post)
+  
   return $(
       `<article class="post">
         <header class="post-header">
@@ -75,4 +75,21 @@ const createTweetElement = function (post) {
 
 
 renderTweets(data);
+
+//form submission using jquery
+
+const postTweet = function(event) {
+  event.preventDefault();
+  const formData = $(this).serialize();
+  $.ajax({
+    method: "POST",
+    data: formData,
+    url: "/tweets"
+  })
+}
+$("form").submit(postTweet);
 })
+
+
+
+
