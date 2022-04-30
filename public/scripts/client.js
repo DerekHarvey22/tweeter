@@ -43,6 +43,19 @@ const createTweetElement = function (post) {
   )
 }
 //form submission using jquery
+
+const loadTweets = function () {
+  $.ajax('./tweets', { method: 'GET'})
+  .then(function (data) {
+$('.counter').text('140');
+$('#tweet-text').val('');
+
+    renderTweets(data)
+  })
+}
+loadTweets()
+
+
 const postTweet = function(event) {
   event.preventDefault();
   const formData = $(this).serialize();
@@ -62,17 +75,14 @@ const postTweet = function(event) {
     data: formData,
     url: "/tweets"
   })
-}
-$("form").submit(postTweet);
-
-const loadTweets = function () {
-  $.ajax('./tweets', { method: 'GET'})
-  .then(function (data) {
-    renderTweets(data)
+  .then(() => {
+    loadTweets();
   })
 }
-loadTweets()
+$("form").submit(postTweet);
 })
+
+
 
 
 
