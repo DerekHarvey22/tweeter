@@ -46,6 +46,16 @@ const createTweetElement = function (post) {
 const postTweet = function(event) {
   event.preventDefault();
   const formData = $(this).serialize();
+  const newTweet = formData.slice(5);
+
+  if (!newTweet) {
+    alert("You have a keyboard, don't be afraid to use it!")
+    return
+  }
+  if (newTweet.length > 140 ) {
+    alert("Please keep you post to under 140 characters.")
+    return
+  }
   console.log(formData)
   $.ajax({
     method: "POST",
