@@ -29,7 +29,7 @@ const createTweetElement = function (post) {
       `<article class="post">
         <header class="post-header">
           <div id ="user">
-            <i img src="${escape(post.user.avatars)}" alt="Profile picture"></i>
+            <img src="${escape(post.user.avatars)}" alt="Profile picture"/>
             <h2 id='username'> "${escape(post.user.name)}" </h2>
           </div>
             <h2 id="userID">${escape(post.user.handle)}</h2>
@@ -64,15 +64,18 @@ loadTweets()
 
 const postTweet = function(event) {
   event.preventDefault();
+  $('.validation').slideUp(500);
   const formData = $(this).serialize();
   const newTweet = formData.slice(5);
 
   if (!newTweet) {
-    alert("You have a keyboard, don't be afraid to use it!")
+    $('.validation').text("You have a keyboard, don't be afraid to use it!")
+    $('.validation').slideDown(500);
     return
   }
   if (newTweet.length > 140 ) {
-    alert("Please keep you post to under 140 characters.")
+    $('.validation').text("Please keep you post to under 140 characters.")
+    $('.validation').slideDown(500);
     return
   }
   console.log(formData)

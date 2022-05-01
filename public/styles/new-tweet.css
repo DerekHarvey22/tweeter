@@ -1,12 +1,16 @@
 #tweet-text {
-  width: 100%;
   max-height: 1.75rem;
   font-family: inherit;
   outline: none;
   border: none;
   border-bottom: 4px solid chocolate;
   background: none;
-  width: 85vw;
+  width: 95%;
+  margin: 8px;
+}
+
+.textarea {
+  width: 100%;
 }
 
 
@@ -26,6 +30,7 @@ button {
   border: 0;
   padding-inline: .5rem;
   font-family: 'Bungee';
+  margin-left: 27px;
 }
 
 button:hover {
@@ -35,8 +40,15 @@ button:hover {
 .new-tweet .counter {
   float:right;
   font-family: 'Bungee';
+  margin-right: 28px;
 }
 
+.validation {
+  color: #D63301;
+  background-color: #ffccba;
+  width: 100%;
+  display: none;
+}
 
 
 

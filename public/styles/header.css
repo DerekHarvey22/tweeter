@@ -1,7 +1,7 @@
 .page-header {
-  padding-top: 130px;
-  height: auto;
-  width: 100vw;
+  margin-top: 120px;
+  height: 400px;
+  width: 100%;
   align-items: center;
   display: flex;
   flex-flow: column;
@@ -9,4 +9,23 @@
   background-color: #e3d536;
   background-image: url("https://www.transparenttextures.com/patterns/dark-geometric.png");
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+margin-bottom: 25px;
+}
+
+h2 {
+  margin: 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+  }
+  .container {
+    margin-top: 140px;
+    width: 50vw;
+  }
+  .page-header{
+    width: 50vw;
+    align-items: center;
+  }
 }

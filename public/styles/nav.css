@@ -14,13 +14,14 @@ nav {
 
 nav span {
   font-family: 'Bungee';
-  padding-top: 1.5em;
 }
 
-.new-tweet {
+.right-hand-nav {
   display: flex;
   margin: .7em;
-  font-size: .8em;
+  font-size: 1.25em;
+  flex-direction: column;
+  align-items: center;
 }
 
 .write-new-tweet {
