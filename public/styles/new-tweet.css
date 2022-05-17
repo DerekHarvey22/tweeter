@@ -43,6 +43,10 @@ button:hover {
   margin-right: 28px;
 }
 
+.counter-red {
+  color: red;
+}
+
 .validation {
   color: #D63301;
   background-color: #ffccba;

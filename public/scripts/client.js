@@ -19,7 +19,7 @@ $(document).ready(function() {
 const renderTweets = function(tweets) {
   for (const post of tweets) {
     console.log(post)
-    $('.tweets-container').append(createTweetElement(post));
+    $('.tweets-container').prepend(createTweetElement(post));
   }
 }
 //implement createTweetelement function
@@ -53,6 +53,7 @@ const createTweetElement = function (post) {
 const loadTweets = function () {
   $.ajax('./tweets', { method: 'GET'})
   .then(function (data) {
+$('.tweets-container').empty();
 $('.counter').text('140');
 $('#tweet-text').val('');
 
