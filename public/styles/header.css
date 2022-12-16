@@ -6,10 +6,10 @@
   display: flex;
   flex-flow: column;
   justify-content: center;
-  background-color: #e3d536;
-  background-image: url("https://www.transparenttextures.com/patterns/dark-geometric.png");
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-margin-bottom: 25px;
+  background-color: #0085cc;
+  background-image: url(http://www.transparenttextures.com/patterns/ag-square.png);
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  margin-bottom: 25px;
 }
 
 h2 {
@@ -20,11 +20,13 @@ h2 {
   body {
     display: flex;
   }
+
   .container {
     margin-top: 140px;
     width: 50vw;
   }
-  .page-header{
+
+  .page-header {
     width: 50vw;
     align-items: center;
   }
